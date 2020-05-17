@@ -43,7 +43,9 @@ output.write("Task 4\n-------------------------------------------\n")
 reLinks = re.compile(r'<a(.*?href="(.+?)".*?)?>(.*)?</a>')
 for m in reLinks.finditer(testpage):
     output.write(m.group(2))
+    output.write("\t")
     output.write(m.group(3))
+    output.write("\n")
 output.write("\n\n============================================================\n\n")
 
 
